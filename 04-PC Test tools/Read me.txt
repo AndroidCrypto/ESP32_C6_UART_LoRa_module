@@ -1,0 +1,2 @@
+File Description:
+CH341SER driver.EXE is the driver software and must be installed before using UartAssist.exe.
