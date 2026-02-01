@@ -18,6 +18,10 @@ As I'm located in Germany/Europe, I'm using the **863-915 MHz** variant of the m
 
 The modules contain the **LR02 LoRa module**, which is powered by an **ASR6601 chip**. The maximum transmit power is specified as **+22 dBm**, and the maximum range (with a clear line of sight) can be 5 kilometers. The sensitivity of the LoRa module is a good **-138 dBm**.
 
+This module does not use a tiny IPEX antenna connector but an **SMA connector** in **female** variant, so you need an antenna (of course, matching to your frequency band) with **male** connector.
+
+![Image 1](./images/dx_lr02_900t22d_04_500w.png)
+
 The module supports three operating modes: transparent transmission, fixed point-to-point transmission, and broadcast transmission. The control is achieved via (text-based) **AT commands**, which are transmitted from a computer to the module via the **UART interface**.
 
 Finally, the module requires an operating voltage of **3.3–5 volts**. I bought the complete two-piece package of LoRa modules, antennas, USB-to-serial adapters, and USB-C cables for around **14 euros**, including shipping costs.
