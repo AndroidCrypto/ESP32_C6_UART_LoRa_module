@@ -26,6 +26,10 @@ The module supports three operating modes: transparent transmission, fixed point
 
 Finally, the module requires an operating voltage of **3.3–5 volts**. I bought the complete two-piece package of LoRa modules, antennas, USB-to-serial adapters, and USB-C cables for around **14 euros**, including shipping costs.
 
+## Important note:
+
+Communication with this module takes place via the UART (serial) interface and not, as is usually the case, via the SPI interface. I have described the associated changes in detail in my tutorial "Simple LoRa transmissions over several kilometers using UART/Serial LoRa modules". Please inform yourself thoroughly before purchasing such a module!
+
 ### Connections between the LoRa module and the USB adapter
 ````plaintext
 LoRA module - USB adapter
@@ -50,6 +54,11 @@ AUX - not connected
 VCC - 3.3V pin
 GND - GND pin
 ````
+
+## Sketch for the tutorial
+
+Progress in work, <soon...>
+
 ## Support material from the manufacturer
 
 Under the heading Support/Data Download, however, we can download additional material about our LoRa module, depending on your frequency band (868/915 MHz or 433 MHz). 
@@ -70,7 +79,5 @@ Additionally, I uploaded an **updated version of UartAssistant.exe** with versio
 
 As the Windows program is a little bit more user-friendly, I'm using this program for demonstration. 
 
-If you already programmed with ESP32 boards, you have probably installed the **CH34x driver** on your Windows computer before. A suitable driver is available in the support package if you should need one.
-
-
+If you already programmed with ESP32 boards, you have probably installed the **CH34x driver** on your Windows computer before. A suitable driver is available in the support package if you should need one. If you prefer to download a more recent CH34x driver, here is a link to the [manufacturer's website](https://www.wch.cn/downloads/CH341SER_ZIP.html) (please use Google Chrome translator to get an English translation).
 
