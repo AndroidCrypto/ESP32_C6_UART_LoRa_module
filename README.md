@@ -4,7 +4,7 @@ Connecting an UART interfaced LoRa module to an ESP32-C6 Super Mini development 
 
 This is the accompanying repository for my upcoming tutorial "**Connect an UART-interfaced LoRa module with an ESP32-C6 Super Mini device**", which can be found here: <soon>
 
-Additionally, it serves as a collection of materials for my tutorial "**Simple LoRa transmissions over several kilometers using UART/Serial LoRa modules**", published here: <soon>.
+Additionally, it serves as a collection of materials for my tutorial "**Simple LoRa transmissions over several kilometers using UART/Serial LoRa modules**", published here: https://medium.com/@androidcrypto/simple-lora-transmissions-over-several-kilometers-using-uart-serial-lora-modules-6c5abbf464f2.
 
 ## WARNING: never connect the LoRa module with a power supply without an attached antenna or you will destroy your module !
 
@@ -28,7 +28,7 @@ Finally, the module requires an operating voltage of **3.3–5 volts**. I bought
 
 ## Important note:
 
-Communication with this module takes place via the UART (serial) interface and not, as is usually the case, via the SPI interface. I have described the associated changes in detail in my tutorial "Simple LoRa transmissions over several kilometers using UART/Serial LoRa modules". Please inform yourself thoroughly before purchasing such a module!
+Communication with this module takes place via the UART (serial) interface and not, as is usually the case, via the SPI interface. I have described the associated changes in detail in my tutorial "**[Simple LoRa transmissions over several kilometers using UART/Serial LoRa modules](https://medium.com/@androidcrypto/simple-lora-transmissions-over-several-kilometers-using-uart-serial-lora-modules-6c5abbf464f2)**". Please inform yourself thoroughly before purchasing such a module!
 
 ### Connections between the LoRa module and the USB adapter
 ````plaintext
