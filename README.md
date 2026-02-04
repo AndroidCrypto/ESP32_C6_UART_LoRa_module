@@ -57,7 +57,15 @@ GND - GND pin
 
 ## Sketch for the tutorial
 
-Progress in work, <soon...>
+The sketh is located in the subfolder "**Esp32_C6_SM_SSD1306_DX_LR02_Monitor**" in this repository.
+
+### Development Environment
+````plaintext
+Arduino IDE Version 2.3.6 (Windows)
+arduino-esp32 boards Version 3.3.5 (https://github.com/espressif/arduino-esp32) that is based on Espressif ESP32 Version 5.5.1
+````
+
+For compiling and uploading please use **ESP32C6 Dev Board**. Don't forget to enable the settings "**USB CDC on boot enabled**" in "Tools" to see the Serial Monitor prints.
 
 ## Support material from the manufacturer
 
