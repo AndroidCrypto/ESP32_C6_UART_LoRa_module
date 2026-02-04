@@ -2,7 +2,7 @@
 
 Connecting an UART interfaced LoRa module to an ESP32-C6 Super Mini development board is super easy. With this combination you are being able to receive and transmit LoRa packets and maybe use the ESP32-C6 as gateway to a Zigbee system ?
 
-This is the accompanying repository for my upcoming tutorial "**Connect an UART-interfaced LoRa module with an ESP32-C6 Super Mini device**", which can be found here: <soon>
+This is the accompanying repository for my upcoming tutorial "**Connect an UART-interfaced LoRa module with an ESP32-C6 Super Mini device**", which can be found here: [<soon>](https://medium.com/@androidcrypto/connect-a-uart-interfaced-lora-module-with-an-esp32-c6-super-mini-device-bdec93514296)
 
 Additionally, it serves as a collection of materials for my tutorial "**Simple LoRa transmissions over several kilometers using UART/Serial LoRa modules**", published here: https://medium.com/@androidcrypto/simple-lora-transmissions-over-several-kilometers-using-uart-serial-lora-modules-6c5abbf464f2.
 
