@@ -1,0 +1,131 @@
+Documentation: https://drive.google.com/drive/u/0/folders/1tHdbces2KQ4oRbOyQuTkcjaJWZ9tdry7 
+Go to LORA MODULE
+download the ZIP-files:
+DXLR20-900 Information Package and
+LR01&02-900MHz Development & User Information
+
+Additionally see the YouTube tutorials:
+https://youtu.be/rQ2OMQQ0Z-Q?si=D2nP5hArFGTcG1iR  «Video Setup Tutorial»
+https://youtu.be/1QKSAfL2r60?si=o2U0BObYTtTubZxS  «Lora unboxing video»
+https://youtu.be/vBtzDdE5UH0                      «LoRa module quick test»
+
+Log file for a settings session
+
+Important: in the Send Options, select "Append Frame Tail" and use:
+Append checksum: NONE
+Append frame tail CR+LF (gives 0D 0A)
+click on OK
+
+In Recv Options use:
+Encoder: ASCII
+Autolinefeed enabled
+
+In Serial Options, use:
+Baudrate: 9600
+Databits: 8
+Stopbits: 1
+Paritybits: NONE
+Flowctrl: NONE
+
+click on "OPEN"
+
+In "Data Send" enter 
++++
+and click on "Send"
+
+The resonse is in Data Receive window:
+Entry AT
+
+Now the module is in Command Mode
+
+Enter: AT+HELP
+Response:
+===================================
+LoRa Parameter:
++VERSION=V2.3.1
+MODE:0
+LEVEL:0 >> 244.140625bps
+SLEEP:2
+Frequency:868000000hz >> 24
+MAC:ff,ff
+Bandwidth:0
+Spreading Factor:12
+Coding rate:2
+CRC:0(false)
+Preamble:8
+IQ:0(false)
+Power:22dBm
+===================================
+
+These are the default parameters the module is working with.As I'm located in Germany/Europe,
+the frequency of 868 MHz is fine, but you should check this with your local, allowed LoRa frequency band.
+
+To exit the Command mode, enter
++++
+Response:
+Exit AT
+Power on
+
+Run:
++++
+
+Change parameters, this is my testing setup:
+a) change frequency to 863.500 MHz
+See pages 22 + 23 of DX-LR02-900T22D Serial port application guide
+There is a table with the predefined channels, for 863.5 select "1B"
+AT+CHANNEL1B
++CHANNEL=1b
+OK
+
+b) Change bandwidth to 125 KHz (that is the default) and Spreadingfactor to 7, this can be done with one call to LEVEL, see page 21:
+AT+LEVEL5
+OK
+
+c) Change coding rate to "4/5"
+See page 25
+AT+CR1
+OK
+
+d) Change transmit power to 0 dBm (the lowest rate for my testings)
+See page 24
+AT+POWE0
+OK
+
+Nun check out changes:
+AT+HELP
+===================================
+LoRa Parameter:
++VERSION=V2.3.1
+MODE:0
+LEVEL:5 >> 5468.750000bps
+SLEEP:2
+Frequency:863500000hz >> 1b
+MAC:ff,ff
+Bandwidth:0
+Spreading Factor:7
+Coding rate:1
+CRC:0(false)
+Preamble:8
+IQ:0(false)
+Power:0dBm
+===================================
+
+Now exit the Command mode:
++++
+Exit AT
+Power on
+
+=========================================
+If you are receiving something like:
+?   ?C   ?­A ?BIJwD
+your module received a pure data (hex) encoded packet. In Recv Options
+change ASCII to HEX and you will see, e.g., this for the next packet:
+04 9C 43 00 00 00 A4 70 AD 41 00 26 11 42 97 50 77 44 68 9E 79 40 44 00 FE 
+
+Note: the device is operating per default in MODE 0 meaning Transparent Mode.
+Everyone on this frequiency is being able to see this packet !
+
+
+
+
+
